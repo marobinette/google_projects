@@ -27,6 +27,7 @@ braille_translation_map = {
     'z': '101011',
 }
 
+
 def translate_string_to_braille(x):
     translation = ""
     if len(x) > 0:
