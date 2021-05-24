@@ -72,3 +72,15 @@ def test_exclamation():
     bt.translate_string_to_braille(
         "What?!"
     ) == "000001010111110010100000011110011001011010"
+
+
+def test_colon():
+    bt.translate_string_to_braille(":") == "010010"
+
+
+def test_semi_colon():
+    bt.translate_string_to_braille(";") == "011000"
+
+
+def test_dash():
+    bt.translate_string_to_braille("-") == "001001"
