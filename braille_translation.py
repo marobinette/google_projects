@@ -25,6 +25,10 @@ braille_translation_map = {
     'x': '101101',
     'y': '101111',
     'z': '101011',
+    '.': '010011',
+    ',': '010000',
+    '?': '011001',
+    '!': '011010',
 }
 
 def translate_string_to_braille(x):

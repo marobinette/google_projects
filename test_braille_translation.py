@@ -32,3 +32,21 @@ def test_x():
 
 def test_z():
     assert bt.translate_string_to_braille('z') == '101011'
+
+def test_period(): 
+    bt.translate_string_to_braille('.') == '010011'
+
+def test_period_after_word():
+    bt.translate_string_to_braille('cat.') == '100100010011'
+
+def test_comma():
+    bt.translate_string_to_braille('but, it') == '110000010000000000010100011110'
+
+def test_question_mark():
+    bt.translate_string_to_braille('?') == '011001'
+
+def test_question():
+    bt.translate_string_to_braille('What?') == '000001010111110010100000011110011001'
+
+def test_exclamation():
+    bt.translate_string_to_braille('What?!') == '000001010111110010100000011110011001011010'
