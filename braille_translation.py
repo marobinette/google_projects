@@ -33,6 +33,7 @@ braille_translation_map = {
     ";": "011000",
     "-": "001001",
     "'": "001000",
+    "1": "100000",
 }
 
 
@@ -40,10 +41,11 @@ def translate_string_to_braille(x):
     translation = ""
     if len(x) > 0:
         for char in x:
+            char_key = char.lower()
             if char == " ":
                 translation = translation + "000000"
             if char.isupper():
                 translation = translation + "000001"
-            if char != " ":
-                translation = translation + braille_translation_map[char.lower()]
+            if char != " " and char_key in braille_translation_map.keys():
+                translation = translation + braille_translation_map[char_key]
     return translation

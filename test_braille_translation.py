@@ -84,3 +84,9 @@ def test_semi_colon():
 
 def test_dash():
     bt.translate_string_to_braille("-") == "001001"
+
+
+def test_1():
+    bt.translate_string_to_braille(
+        "I love the number 1"
+    ) == "000001010100000000111000101010111001100010000000011110110010100010000000101110101001101100110000100010111010000000100000"
